@@ -4,20 +4,19 @@
 
 int main(){
 
+    //Task A
+    std::cout << "--------------" << std::endl;
+    std::cout << "Task A" << std::endl;
+    std::cout << "--------------" << std::endl;
+    std::cout << printRange(-2,10) <<std::endl;
 
-//Task A
-std::cout << "--------------" << std::endl;
-std::cout << "Task A" << std::endl;
-std::cout << "--------------" << std::endl;
-  printRange(-2,10);
+    // Doesnt work
+    //printRange(10,3);
 
-  // Doesnt work
-  printRange(10,3);
-
-// Task B
-std::cout << "--------------" << std::endl;
-std::cout << "Task B" << std::endl;
-std::cout << "--------------" << std::endl;
+    // Task B
+    std::cout << "--------------" << std::endl;
+    std::cout << "Task B" << std::endl;
+    std::cout << "--------------" << std::endl;
 
     int x = sumRange(1, 3);
     std::cout << "This is " << x << std::endl;
@@ -25,12 +24,12 @@ std::cout << "--------------" << std::endl;
     int y = sumRange(-2, 10);
     std::cout << "That is " << y << std::endl;   // 52 
 
-// Task C
-std::cout << "--------------" << std::endl;
-std::cout << "Task C" << std::endl;
-std::cout << "--------------" << std::endl;
+    // Task C
+    std::cout << "--------------" << std::endl;
+    std::cout << "Task C" << std::endl;
+    std::cout << "--------------" << std::endl;
 
-int size = 10;
+    int size = 10;
     int *arr = new int[size]; // allocate array dynamically
     arr[0] = 12;
     arr[1] = 17;
@@ -54,13 +53,27 @@ int size = 10;
 
 
 
-// Task D
-std::cout << "--------------" << std::endl;
-std::cout << "Task D" << std::endl;
-std::cout << "--------------" << std::endl;
+    // Task D
+    std::cout << "--------------" << std::endl;
+    std::cout << "Task D" << std::endl;
+    std::cout << "--------------" << std::endl;
 
-std::cout << isAlphanumeric("ABCD") << std::endl;        // true (1)
-std::cout << isAlphanumeric("Abcd1234xyz") << std::endl; // true (1)
-std::cout << isAlphanumeric("KLMN 8-7-6") << std::endl; // false
+    std::cout << isAlphanumeric("ABCD") << std::endl;        // true (1)
+    std::cout << isAlphanumeric("Abcd1234xyz") << std::endl; // true (1)
+    std::cout << isAlphanumeric("KLMN 8-7-6") << std::endl; // false
 
+
+    // Task E
+    std::cout << "--------------" << std::endl;
+    std::cout << "Task E" << std::endl;
+    std::cout << "--------------" << std::endl;
+
+    std::cout << nestedParens("((()))") << std::endl;      // true (1)
+    std::cout << nestedParens("()") << std::endl;          // true (1)
+    std::cout << nestedParens("") << std::endl;            // true (1)
+
+    std::cout << nestedParens("(((") << std::endl;         // false (0)
+    std::cout << nestedParens("(()") << std::endl;         // false (0)
+    std::cout << nestedParens(")(") << std::endl;          // false (0)
+    std::cout << nestedParens("a(b)c") << std::endl;       // false (0)
 }
