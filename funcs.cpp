@@ -1,23 +1,19 @@
 #include <iostream>
+#include <string>
 
 
-void printRange(int left, int right){
-    
+
+std::string printRange(int left, int right){
     if (left > right){
-        return; 
+        return "";
     }
-
     if (left == right){
 
-        std::cout<< left << std::endl;
+        return std::to_string(left);
     }
-    else {
-
-        std::cout << left << std::endl;
-         printRange(left+1,right);
-
-    } 
-    
+    else{
+    return std::to_string(left) + " " + printRange(left + 1, right);  
+    }  
 }
 
 int sumRange(int left, int right){
@@ -74,4 +70,23 @@ bool isAlphanumeric(std::string s){
     }
     
     
+}
+
+bool nestedParens(std::string s){
+
+    if(s.length() == 0){
+        return true;
+    }
+    else if(s.length() < 2){
+        return false;
+    }
+    else{
+        if(s[0] == '(' && s[s.size()-1] == ')'){
+            return nestedParens(s.substr(1, s.size()-2));
+        }
+        else{
+            return false;
+        }
+    }
+
 }
